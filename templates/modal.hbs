@@ -1,0 +1,37 @@
+<div class="card__img-wrap">
+  <img src="{{poster_path}}" alt="modal__img" class="card__img">
+</div>
+<div class="card__content-wrap">
+  <h3 class="card__title">{{original_title}}</h3>
+  <div class="card__info-wrap">
+    <ul class="card__info-list list">
+      <li class="card__info-item">
+        <p class="card__info-title">Vote / Votes</p>
+        <p class="card__info-vote"><span class="js-vote">{{vote_average}}</span>&nbsp;/&nbsp;<span>{{vote_count}}</span>
+        </p>
+      </li>
+      <li class="card__info-item">
+        <p class="card__info-title">Popularity</p>
+        <p class="card__info-popularity">{{popularity}}</p>
+      </li>
+      <li class="card__info-item">
+        <p class="card__info-title">Original Title</p>
+        <p class="card__info-movie-name">{{original_title}}</p>
+      </li>
+      <li class="card__info-item">
+        <p class="card__info-title">Genre</p>
+        <ul class="card__info__genre-list list">
+          {{#each genre_ids}}
+          <li class="card__info__genre-item">{{this}}<span>,&nbsp;</span></li>
+          {{/each}}
+      </li>
+    </ul>
+  </div>
+  <p class="card__description-title">About</p>
+  <p class="card__description">{{overview}}</p>
+  <div class="card__btn-box">
+    <button type="button" class="button card__btn js-watched" data-release_date="{{release_date}}">add to
+      Watched</button>
+    <button type="button" class="button card__btn js-queue">add to queue</button>
+  </div>
+</div>

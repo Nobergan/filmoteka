@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <title>Filmoteka</title>
+
+    <!-- Don't forget to delete this style tag. -->
+  </head>
+
+  <body>
+    <header class="header header__home" data-index="header">
+      <nav class="nav container" data-index="navigation">
+        <a href="./index.html" class="nav__logo logo-style">
+          <svg class="nav__logo-icon" width="24" height="24">
+            <use href="./images/sprite.svg#icon-film"></use>
+          </svg>
+          <span class="nav__logo-text">Filmoteka</span>
+        </a>
+        <div class="nav__btn-section" data-index="headerButtons">
+          <button class="nav__btn current" id="home" data-index="home">
+            HOME
+          </button>
+          <button class="nav__btn" id="myLibrary" data-index="mylibrary">
+            MY LIBRARY
+          </button>
+        </div>
+      </nav>
+      <div data-index="headerСhanging"></div>
+    </header>
+
+    <main>
+      <section class="movie">
+        <div class="spinner-border" role="status" id="spinner">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="container js-container">
+          <h2 class="movie__tittle visually-hidden">List of movies</h2>
+          <ul class="movie__list list"></ul>
+        </div>
+      </section>
+
+      <!-- Modal -->
+      <div id="js-backdrop" class="backdrop is-hidden" data-modal>
+        <div class="card">
+          <button class="card__btn-close" type="button">
+            <span class="material-icons card__icon-close"> clear </span>
+          </button>
+
+          <div class="card-box"></div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div id="pagination-container"></div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__text container">
+        <span class="footer__text-section">
+          <span
+            >© 2021 | All Rights Reserved | Developed with<i
+              class="material-icons"
+              >favorite</i
+            >by
+            <a
+              href
+              class="footer__link"
+              onclick="return false"
+              data-index="team"
+              >GoIT Students Team-A</a
+            >
+          </span>
+        </span>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </body>
+</html>
